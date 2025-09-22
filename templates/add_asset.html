@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card shadow">
+    <div class="card-header bg-white">
+        <h3 class="card-title mb-0"><i class="fas fa-plus-circle me-2"></i>Add New Asset</h3>
+    </div>
+    <div class="card-body">
+        <form method="POST">
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label class="form-label">Serial Number</label>
+                    <input type="text" name="serial_no" class="form-control" required>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Asset Name</label>
+                    <input type="text" name="name" class="form-control" required>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Asset Type</label>
+                    <input type="text" name="type" class="form-control" required>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Location</label>
+                    <input type="text" name="location" class="form-control" required>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Assigned To</label>
+                    <input type="text" name="assigned_to" class="form-control" required>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Status</label>
+                    <select name="status" class="form-select" required>
+                        <option value="Active">Active</option>
+                        <option value="In Repair">In Repair</option>
+                        <option value="Retired">Retired</option>
+                    </select>
+                </div>
+                <div class="col-12 mt-4">
+                    <button type="submit" class="btn btn-primary px-4 py-2">
+                        <i class="fas fa-save me-2"></i>Save Asset
+                    </button>
+                    <a href="{{ url_for('dashboard') }}" class="btn btn-outline-secondary ms-2">
+                        <i class="fas fa-times me-2"></i>Cancel
+                    </a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

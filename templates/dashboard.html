@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="text-center mb-5">
+    <h1 class="display-5 fw-bold text-primary">
+        <i class="fas fa-tachometer-alt me-2"></i>Dashboard
+    </h1>
+    <p class="lead text-muted">Manage your assets efficiently</p>
+</div>
+
+<div class="row g-4 mb-5">
+    <div class="col-md-4">
+        <div class="card h-100 border-primary shadow-sm">
+            <div class="card-body text-center">
+                <i class="fas fa-boxes fa-3x text-primary mb-3"></i>
+                <h2 class="text-primary">{{ asset_count }}</h2>
+                <h5 class="card-title">Total Assets</h5>
+                <a href="{{ url_for('view_assets') }}" class="btn btn-outline-primary stretched-link mt-2">
+                    View All <i class="fas fa-arrow-right ms-1"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card h-100 border-success shadow-sm">
+            <div class="card-body text-center">
+                <i class="fas fa-check-circle fa-3x text-success mb-3"></i>
+                <h2 class="text-success">{{ active_assets }}</h2>
+                <h5 class="card-title">Active Assets</h5>
+                <a href="{{ url_for('view_assets') }}?status=Active" class="btn btn-outline-success stretched-link mt-2">
+                    View Active <i class="fas fa-arrow-right ms-1"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card h-100 border-info shadow-sm">
+            <div class="card-body text-center">
+                <i class="fas fa-search fa-3x text-info mb-3"></i>
+                <h5 class="card-title">Track Asset</h5>
+                <p class="card-text">Locate specific equipment</p>
+                <a href="{{ url_for('track_asset') }}" class="btn btn-outline-info stretched-link">
+                    Track Now <i class="fas fa-arrow-right ms-1"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card shadow">
+    <div class="card-header bg-white border-bottom-0">
+        <h5 class="mb-0"><i class="fas fa-bolt me-2"></i>Quick Actions</h5>
+    </div>
+    <div class="card-body">
+        <div class="d-grid gap-3 d-md-flex justify-content-md-center">
+            <a href="{{ url_for('add_asset') }}" class="btn btn-primary px-4 py-2">
+                <i class="fas fa-plus me-2"></i>Add New Asset
+            </a>
+            <a href="{{ url_for('view_assets') }}" class="btn btn-success px-4 py-2">
+                <i class="fas fa-list me-2"></i>View All Assets
+            </a>
+            <a href="{{ url_for('track_asset') }}" class="btn btn-info px-4 py-2">
+                <i class="fas fa-search me-2"></i>Track Asset
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-6">
+        <div class="card shadow mb-4">
+            <div class="card-header bg-white">
+                <h3 class="mb-0"><i class="fas fa-search me-2"></i>Track Asset</h3>
+            </div>
+            <div class="card-body">
+                <form method="GET">
+                    <div class="input-group mb-3">
+                        <input type="text" name="name" class="form-control" 
+                               placeholder="Enter asset name, serial no. or user" 
+                               value="{{ search_term if search_term }}" required>
+                        <button class="btn btn-primary" type="submit">
+                            <i class="fas fa-search me-1"></i>Search
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    {% if assets %}
+    <div class="col-lg-6">
+        <div class="card shadow">
+            <div class="card-header bg-success text-white">
+                <h3 class="mb-0">
+                    <i class="fas fa-check-circle me-2"></i>
+                    {% if search_type == 'serial' %}Asset Found
+                    {% else %}Search Results ({{ assets|length }}){% endif %}
+                </h3>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <tbody>
+                            {% for asset in assets %}
+                            <tr>
+                                <th>Serial No.</th>
+                                <td>{{ asset.serial_no }}</td>
+                            </tr>
+                            <tr>
+                                <th>Name</th>
+                                <td>{{ asset.name }}</td>
+                            </tr>
+                            <tr>
+                                <th>Type</th>
+                                <td>{{ asset.type }}</td>
+                            </tr>
+                            <tr>
+                                <th>Location</th>
+                                <td>{{ asset.location }}</td>
+                            </tr>
+                            <tr>
+                                <th>Assigned To</th>
+                                <td>{{ asset.assigned_to }}</td>
+                            </tr>
+                            <tr>
+                                <th>Status</th>
+                                <td>
+                                    <span class="badge 
+                                        {% if asset.status == 'Active' %}bg-success
+                                        {% elif asset.status == 'In Repair' %}bg-warning
+                                        {% else %}bg-secondary{% endif %}">
+                                        {{ asset.status }}
+                                    </span>
+                                </td>
+                            </tr>
+                            {% if not loop.last %}
+                            <tr><td colspan="2"><hr></td></tr>
+                            {% endif %}
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% elif search_term %}
+    <div class="col-lg-6">
+        <div class="alert alert-danger">
+            <i class="fas fa-exclamation-triangle me-2"></i>
+            No assets found matching "{{ search_term }}"
+        </div>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

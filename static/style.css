@@ -1,0 +1,103 @@
+/* Custom Variables */
+:root {
+    --primary: #4e73df;
+    --secondary: #858796;
+    --success: #1cc88a;
+    --info: #36b9cc;
+    --warning: #f6c23e;
+    --danger: #e74a3b;
+    --light: #f8f9fc;
+    --dark: #5a5c69;
+}
+
+/* Smooth transitions */
+* {
+    transition: all 0.2s ease;
+}
+
+/* Body styling */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--light);
+}
+
+/* Card hover effects */
+.card {
+    border: none;
+    border-radius: 0.35rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Button styling */
+.btn {
+    border-radius: 0.3rem;
+    font-weight: 600;
+    padding: 0.5rem 1.25rem;
+}
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+.btn-primary:hover {
+    background-color: #2e59d9;
+    border-color: #2653d4;
+}
+
+/* Form styling */
+.form-control, .form-select {
+    border-radius: 0.3rem;
+    padding: 0.5rem 0.75rem;
+}
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.25rem rgba(78, 115, 223, 0.25);
+}
+
+/* Table styling */
+.table {
+    --bs-table-bg: transparent;
+    margin-bottom: 0;
+}
+.table thead {
+    background-color: var(--primary);
+    color: white;
+}
+.table th {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+}
+
+/* Badge styling */
+.badge {
+    font-weight: 600;
+    padding: 0.35em 0.65em;
+    font-size: 0.75em;
+    letter-spacing: 0.5px;
+}
+
+/* Alert customization */
+.alert {
+    border-radius: 0.35rem;
+    border: none;
+}
+
+/* Navbar customization */
+.navbar {
+    padding: 0.75rem 1rem;
+}
+.navbar-brand {
+    font-size: 1.25rem;
+}
+
+/* Footer styling */
+footer {
+    background-color: var(--dark);
+}
