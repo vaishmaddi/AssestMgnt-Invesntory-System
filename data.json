@@ -1,0 +1,162 @@
+[
+    {
+        "id": 1,
+        "name": "Dell Latitude 5530 Laptop",
+        "type": "Laptop",
+        "location": "Kanchanbagh Unit",
+        "assigned_to": "John Doe",
+        "status": "Active",
+        "serial_no": "001",
+        "date_added": "2025-05-31"
+    },
+    {
+        "id": 2,
+        "name": "HP LaserJet Pro M404n",
+        "type": "Printer",
+        "location": "Bhanur Unit",
+        "assigned_to": "IT Department",
+        "status": "Active",
+        "serial_no": "002",
+        "date_added": "2025-05-31"
+    },
+    {
+        "id": 3,
+        "name": "Cisco Catalyst 2960 Switch",
+        "type": "Network Switch",
+        "location": "Visakhapatnam Unit",
+        "assigned_to": "Network Team",
+        "status": "Retired",
+        "serial_no": "003",
+        "date_added": "2025-05-31"
+    },
+    {
+        "id": 4,
+        "name": "Apple iPhone 14 Pro",
+        "type": "Mobile Device",
+        "location": "Hyderabad Office",
+        "assigned_to": "Jane Smith",
+        "status": "In Repair",
+        "serial_no": "004",
+        "date_added": "2025-05-31"
+    },
+    {
+        "id": 5,
+        "name": "Logitech MX Master 3 Mouse",
+        "type": "Peripheral",
+        "location": "Kanchanbagh Unit",
+        "assigned_to": "Unassigned",
+        "status": "Retired",
+        "serial_no": "005",
+        "date_added": "2025-05-31"
+    },
+    {
+        "id": 6,
+        "name": "Samsung 34\" Monitor",
+        "type": "Monitor",
+        "location": "Bhanur Unit",
+        "assigned_to": "Mark Johnson",
+        "status": "Active",
+        "serial_no": "006",
+        "date_added": "2025-05-31"
+    },
+    {
+        "id": 7,
+        "name": "Lenovo ThinkPad X1 Carbon",
+        "type": "Laptop",
+        "location": "Kanchanbagh Unit",
+        "assigned_to": "Abhinav Sharma",
+        "status": "Active",
+        "serial_no": "007",
+        "date_added": "2025-05-31"
+    },
+    {
+        "id": 8,
+        "name": "Cisco ASA 5506-X",
+        "type": "Firewall",
+        "location": "Server Room, Hyd",
+        "assigned_to": "Network Security Team",
+        "status": "Active",
+        "serial_no": "008",
+        "date_added": "2025-05-31"
+    },
+    {
+        "id": 9,
+        "name": "Canon imageRUNNER 2630",
+        "type": "Multi-function Printer",
+        "location": "Admin Block, Bhanur",
+        "assigned_to": "Admin Department",
+        "status": "In Repair",
+        "serial_no": "009",
+        "date_added": "2025-05-31"
+    },
+    {
+        "id": 10,
+        "name": "APC Smart-UPS 1500VA",
+        "type": "Power Backup",
+        "location": "Data Center, Hyd",
+        "assigned_to": "Infrastructure Team",
+        "status": "Retired",
+        "serial_no": "010",
+        "date_added": "2025-05-31"
+    },
+    {
+        "id": 11,
+        "name": "HP ENVY",
+        "type": "Laptop",
+        "location": "Hyderabad ",
+        "assigned_to": "Vaishnavi",
+        "status": "Active",
+        "serial_no": "011",
+        "date_added": "2025-05-31"
+    },
+    {
+        "id": 12,
+        "name": "Hp Monitor",
+        "type": "Monitor",
+        "location": "KBU",
+        "assigned_to": "ITD",
+        "status": "Active",
+        "serial_no": "012",
+        "date_added": "2025-06-02"
+    },
+    {
+        "id": 13,
+        "name": "Hp CPU",
+        "type": "CPU",
+        "location": "KBU",
+        "assigned_to": "ITD",
+        "status": "Active",
+        "serial_no": "013",
+        "date_added": "2025-06-02"
+    },
+    {
+        "id": 14,
+        "name": "Hp Keyboard",
+        "type": "Peripheral",
+        "location": "KBU",
+        "assigned_to": "ITD",
+        "status": "Active",
+        "serial_no": "014",
+        "date_added": "2025-06-02"
+    },
+    {
+        "id": 15,
+        "name": "Hp Mouse",
+        "type": "Peripheral",
+        "location": "KBU",
+        "assigned_to": "ISTM",
+        "status": "Active",
+        "serial_no": "015",
+        "date_added": "2025-06-02"
+    },
+    {
+        "id": 16,
+        "name": "Dell Laptop",
+        "type": "Laptop ",
+        "location": "Hyderabad",
+        "assigned_to": "Shreya",
+        "status": "Active",
+        "serial_no": "016",
+        "date_added": "2025-06-11"
+    }
+]
